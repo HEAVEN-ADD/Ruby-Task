@@ -23,7 +23,6 @@
   </head>
 
   <body>
-    <body>
     <h1>Todo Application</h1>
     <header>
       <% current_hour = Time.current.hour %>
@@ -39,7 +38,7 @@
         end
       %>
       <p><%= greeting %></p>
-      <p>You've visited <%= session[:visit_count] %> times (total)</p>
+      <p>You have visited <%= session[:visit_count] %> times (total)</p>
       <% 
         page_key = "page_visits_#{request.path}"
         session[page_key] ||= 0
@@ -55,6 +54,5 @@
       <% session[:last_visited] = Time.current %>
     </header>
     <%= yield %>
-
   </body>
 </html>
