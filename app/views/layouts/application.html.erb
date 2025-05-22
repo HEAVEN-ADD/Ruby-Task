@@ -52,6 +52,7 @@
       <% else %>
         <p>This is your first visit!</p>
       <% end %>
+      <% session[:last_visited] = Time.current %>
     </header>
     <%= yield %>
 
